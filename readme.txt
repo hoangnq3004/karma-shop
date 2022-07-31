@@ -1,41 +1,64 @@
-=== Twenty Twenty-Two ===
+=== Twenty Twenty-One ===
 Contributors: wordpressdotorg
-Requires at least: 5.9
-Tested up to: 6.0
+Requires at least: 5.3
+Tested up to: 5.8
 Requires PHP: 5.6
-Stable tag: 1.2
+Stable tag: 1.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
 
-Built on a solidly designed foundation, Twenty Twenty-Two embraces the idea that everyone deserves a truly unique website. The theme’s subtle styles are inspired by the diversity and versatility of birds: its typography is lightweight yet strong, its color palette is drawn from nature, and its layout elements sit gently on the page.
+Twenty Twenty-One is a blank canvas for your ideas and it makes the block editor your best brush.
 
-The true richness of Twenty Twenty-Two lies in its opportunity for customization. The theme is built to take advantage of the Full Site Editing features introduced in WordPress 5.9, which means that colors, typography, and the layout of every single page on your site can be customized to suit your vision. It also includes dozens of block patterns, opening the door to a wide range of professionally designed layouts in just a few clicks.
+With new block patterns, which allow you to create a beautiful layout in a matter of seconds, this theme’s soft colors and eye-catching — yet timeless — design will let your work shine.
 
-Whether you’re building a single-page website, a blog, a business website, or a portfolio, Twenty Twenty-Two will help you create a site that is uniquely yours.
+Take it for a spin! See how Twenty Twenty-One elevates your portfolio, business website, or personal blog.
+
+== Installation ==
+
+1. In your admin panel, go to Appearance -> Themes and click the 'Add New' button.
+2. Type in Twenty Twenty-One in the search form and press the 'Enter' key on your keyboard.
+3. Click on the 'Activate' button to use your new theme right away.
+4. Go to INSERT ABOUT PAGE for a guide on how to customize this theme.
+5. Navigate to Appearance > Customize in your admin panel and customize to your taste.
+
+== Privacy ==
+Twenty Twenty-One uses LocalStorage to save the setting when Dark Mode support is turned on or off.
+LocalStorage is necessary for the setting to work and is only used when a user clicks on the Dark Mode button.
+No data is saved in the database or transferred.
 
 == Changelog ==
 
-= 1.2 =
-* Released: May 24, 2022
+= 1.4 =
+* Released: July 20, 2021
 
-https://wordpress.org/support/article/twenty-twenty-two-changelog#Version_1.2
+https://wordpress.org/support/article/twenty-twenty-one-changelog#Version_1.4
+
+= 1.3 =
+* Released: April 14, 2021
+
+https://wordpress.org/support/article/twenty-twenty-one-changelog#Version_1.3
+
+= 1.2 =
+* Released: March 9, 2021
+
+https://wordpress.org/support/article/twenty-twenty-one-changelog#Version_1.2
 
 = 1.1 =
-* Released: February 22, 2022
+* Released: December 22, 2020
 
-https://wordpress.org/support/article/twenty-twenty-two-changelog#Version_1.1
+https://wordpress.org/support/article/twenty-twenty-one-changelog#Version_1.1
 
 = 1.0 =
-* Released: January 25, 2022
+* Released: December 8, 2020
 
-https://wordpress.org/support/article/twenty-twenty-two-changelog#Version_1.0
+https://wordpress.org/support/article/twenty-twenty-one-changelog#Version_1.0
 
 == Copyright ==
 
-Twenty Twenty-Two WordPress Theme, 2021-2022 WordPress.org
-Twenty Twenty-Two is distributed under the terms of the GNU GPL.
+Twenty Twenty-One WordPress Theme, 2020-2021 WordPress.org
+Twenty Twenty-One is distributed under the terms of the GNU GPL.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -47,50 +70,50 @@ but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU General Public License for more details.
 
+
+Twenty Twenty-One is derived from Seedlet, (C) 2020 Automattic, Inc.
+
+Twenty Twenty-One is also based on:
+
+Twenty Nineteen. 2018-2021 WordPress.org
+Twenty Nineteen is distributed under the terms of the GNU GPL v2 or later.
+
+Twenty Seventeen. Copyright (C) 2016-2021 WordPress.org
+Twenty Seventeen is distributed under the terms of the GNU GPL v2 or later.
+
+Twenty Sixteen. Copyright (C) 2015-2021 WordPress.org
+Twenty Sixteen is distributed under the terms of the GNU GPL v2 or later.
+
+Twenty Twenty. Copyright (C) 2020-2021 WordPress.org
+Twenty Twenty is distributed under the terms of the GNU GPL v2 or later.
+
+Underscores https://underscores.me/, Copyright (C) 2012-2021 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+
+Unless otherwise noted, the icons in this theme are derived from the WordPress
+Icons Library, licensed under the terms of the GNU GPL v2 or later.
+https://github.com/WordPress/gutenberg/tree/master/packages/icons
+
 This theme bundles the following third-party resources:
 
-DM Sans Font
-Copyright 2014-2017 Indian Type Foundry (info@indiantypefoundry.com)
-Copyright 2019 Google LLC
-Copyright 2014-2018 Adobe (http://www.adobe.com/)
-License: SIL Open Font License, 1.1, https://opensource.org/licenses/OFL-1.1
-Source: https://github.com/googlefonts/dm-fonts
+input[type='checkbox'], input[type='radio'], input[type='ranged'],
+https://css-tricks.com/custom-styling-form-inputs-with-modern-css-features/
+https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/
+https://codepen.io/aaroniker/pen/ZEYoxEY Copyright (c) 2020 Aaron Iker
+https://codepen.io/chriscoyier/pen/FtnAa Copyright (c) 2020 Chris Coyier
+License: MIT.
 
-IBM Plex Font
-Copyright 2017 IBM Corp.
-License: SIL Open Font License, 1.1, https://opensource.org/licenses/OFL-1.1
-Source: https://github.com/IBM/plex
-
-Inter Font
-Copyright (c) 2016-2020 The Inter Project Authors.
-License: SIL Open Font License, 1.1, https://opensource.org/licenses/OFL-1.1
-Source: https://github.com/rsms/inter
-
-Source Serif Font
-Copyright 2014-2021 Adobe (http://www.adobe.com/)
-License: SIL Open Font License, 1.1, https://opensource.org/licenses/OFL-1.1
-Source: https://github.com/adobe-fonts/source-serif
-
-Block Pattern Images:
-
-"White Bellied Flycatcher" illustrated by Elizabeth Gould. Public Domain.
-https://www.rawpixel.com/image/321474/free-illustration-image-bird-vintage-birds
-Includes modified versions created specifically for Twenty Twenty-Two.
-
-Colorful vintage hummingbird illustrations. CC0.
-https://www.rawpixel.com/image/2281674/free-illustration-image-bird-hummingbird-flying
-https://www.rawpixel.com/image/2281671/free-illustration-image-bird-hummingbird-flying
-https://www.rawpixel.com/image/2281679/free-illustration-image-bird-hummingbird-animals
-https://www.rawpixel.com/image/2281665/free-illustration-image-hummingbird-ernst-haeckel-birds
-
-"Green-tailed Jacamar" by Jacques Barraband. CC0.
-https://www.rawpixel.com/image/328508/free-illustration-image-jacques-barraband-paradise
-
-"Ducks" by Goyō Hashiguchi. CC0
-https://www.rawpixel.com/image/3813787/illustration-image-flower-art-floral
-
-"Colombes et lis, étoffe imprimée" illustrated by Maurice Pillard Verneuil.
-https://www.rawpixel.com/image/2053817/illustration-from-lanimal-dans-decoration
-Included as a short video clip.
-
-Modified versions of the above images, as well as additional "flight path" illustrations were created specifically for Twenty Twenty-Two. CC0.
+Images
+Art by Berthe Morisot 1841-1895. Public domain.
+https://www.wikiart.org/en/berthe-morisot/playing-in-the-sand
+https://www.wikiart.org/en/berthe-morisot/roses-tremieres-hollyhocks-1884
+https://www.wikiart.org/en/berthe-morisot/young-woman-in-mauve
+https://www.wikiart.org/en/berthe-morisot/in-the-bois-de-boulogne
+https://www.wikiart.org/en/berthe-morisot/daffodils
+https://www.wikiart.org/en/berthe-morisot/self-portrait-1885
+https://www.wikiart.org/en/berthe-morisot/the-garden-at-bougival-1884
+https://www.wikiart.org/en/berthe-morisot/villa-with-orange-trees-nice
+https://www.wikiart.org/en/berthe-morisot/reading
