@@ -9,14 +9,18 @@
 
 // Don't show the title if the post-format is `aside` or `status`.
 $post_format = get_post_format();
-if ( 'aside' === $post_format || 'status' === $post_format ) {
-	return;
+if ('aside' === $post_format || 'status' === $post_format) {
+    return;
 }
 ?>
 
 <header class="entry-header">
-	<?php
-	the_title( sprintf( '<h2 class="entry-title default-max-width"><a href="%s">', esc_url( get_permalink() ) ), '</a></h2>' );
-	twenty_twenty_one_post_thumbnail();
-	?>
+    <?php
+    twenty_twenty_one_post_thumbnail();
+    ?>
+    <div class="blog_details">
+        <?php
+        the_title(sprintf('<h2 class="entry-title default-max-width"><a href="%s">', esc_url(get_permalink())), '</a></h2>');
+        ?>
+    </div>
 </header><!-- .entry-header -->

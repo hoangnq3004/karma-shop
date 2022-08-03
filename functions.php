@@ -357,6 +357,17 @@ function twenty_twenty_one_widgets_init()
 
     register_sidebar(
         array(
+            'name' => esc_html__('Right', 'twentytwentyone'),
+            'id' => 'sidebar-right',
+            'description' => esc_html__('Add widgets here to appear in your right.', 'twentytwentyone'),
+            'before_widget' => '<section id="%1$s" class="widget %2$s">',
+            'after_widget' => '</section>',
+            'before_title' => '<h2 class="widget-title">',
+            'after_title' => '</h2>',
+        )
+    );
+    register_sidebar(
+        array(
             'name' => esc_html__('Footer', 'twentytwentyone'),
             'id' => 'sidebar-1',
             'description' => esc_html__('Add widgets here to appear in your footer.', 'twentytwentyone'),
@@ -733,3 +744,28 @@ function twentytwentyone_add_ie_class()
 }
 
 add_action('wp_footer', 'twentytwentyone_add_ie_class');
+
+// To change add to cart text on single product page
+add_filter('woocommerce_product_single_add_to_cart_text', 'woocommerce_custom_single_add_to_cart_text');
+function woocommerce_custom_single_add_to_cart_text()
+{
+    return __('Add to cart', 'woocommerce');
+}
+
+// To change add to cart text on product archives(Collection) page
+add_filter('woocommerce_product_add_to_cart_text', 'woocommerce_custom_product_add_to_cart_text');
+function woocommerce_custom_product_add_to_cart_text()
+{
+    return __('Add to cart', 'woocommerce');
+}
+
+// To change add to cart text on product archives(Collection) page
+add_filter('woocommerce_product_price_class', 'woocommerce_custom_product_price_class');
+function woocommerce_custom_product_price_class()
+{
+    return '';
+}
+
+add_filter('get_the_archive_title_prefix', function () {
+    return '';
+});

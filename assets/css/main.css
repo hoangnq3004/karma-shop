@@ -81,7 +81,7 @@
 
 /* Start Gradient Area css
 ============================================================================================ */
-.gradient-bg, .primary-btn, .add-bag .add-btn, .single-product .product-details .prd-bottom .social-info span:after, .grid-btn:hover, .list-btn:hover, .grid-btn.active, .list-btn.active, .pagination a.active, .pagination a:hover, .s_Product_carousel .owl-dots div.active, .s_product_text .card_area .icon_btn:after, .product_description_area .nav.nav-tabs li a.active, .blog-pagination .page-item.active .page-link, .single-footer-widget .click-btn {
+.gradient-bg, .primary-btn, .add-bag .add-btn, .single-product .product-details .prd-bottom .social-info span:after, .grid-btn:hover, .list-btn:hover, .grid-btn.active, .list-btn.active, .pagination a.active, .pagination a:hover, .s_Product_carousel .owl-dots div.active, .s_product_text .card_area .icon_btn:after, .woocommerce div.product .product_description_area .woocommerce-tabs ul.tabs li.active a, .product_description_area .woocommerce-tabs ul.tabs li.active, .blog-pagination .page-item.active .page-link, .single-footer-widget .click-btn {
     background: -webkit-linear-gradient(90deg, #ffba00 0%, #ff6c00 100%);
     background: -moz-linear-gradient(90deg, #ffba00 0%, #ff6c00 100%);
     background: -o-linear-gradient(90deg, #ffba00 0%, #ff6c00 100%);
@@ -95,7 +95,7 @@
     background: linear-gradient(270deg, #ffba00 0%, #ff6c00 100%);
 }
 
-.gradient-color, .s_product_text h2, .s_product_text .list li a.active, .product_description_area .tab-content .total_rate .box_total h4, .single-footer-widget .bb-btn {
+.gradient-color, .s_product_text .list li a, .product_description_area .tab-content .total_rate .box_total h4, .single-footer-widget .bb-btn {
     background: -webkit-linear-gradient(90deg, #ffba00 0%, #ff6c00 100%);
     background: -moz-linear-gradient(90deg, #ffba00 0%, #ff6c00 100%);
     background: -o-linear-gradient(90deg, #ffba00 0%, #ff6c00 100%);
@@ -157,7 +157,7 @@ body {
     font-size: 14px;
     font-family: "Roboto", sans-serif;
     font-weight: 400;
-    color: #777777;
+    color: #222222 !important;
     background: #fff;
 }
 
@@ -178,7 +178,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Poppins", sans-serif;
+    font-family: "Roboto", sans-serif;
     color: #222222;
     font-weight: 500;
     line-height: 1.2 !important;
@@ -1690,7 +1690,11 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-.banner-area .banner-content h1 {
+.banner-area .banner-content .read-more {
+    display: none;
+}
+
+.banner-area .banner-content h1, .banner-area .banner-content .wcps-items-title {
     font-size: 60px;
     line-height: 66px;
     font-weight: 700;
@@ -1698,7 +1702,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 767px) {
-    .banner-area .banner-content h1 {
+    .banner-area .banner-content h1,
+    .banner-area .banner-content wcps-items-title {
         font-size: 35px;
         line-height: 46px;
     }
@@ -5488,6 +5493,10 @@ label {
     }
 }
 
+.woocommerce div.product div.images {
+    width: 100% !important
+}
+
 .s_product_text h3 {
     font-size: 24px;
     font-weight: 500;
@@ -5499,6 +5508,21 @@ label {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 15px;
+}
+
+.s_product_text h2 del {
+    color: #929292;
+    text-decoration: line-through;
+}
+
+.s_product_text h2 ins {
+    background: -webkit-linear-gradient(90deg, #ffba00 0%, #ff6c00 100%);
+    background: -moz-linear-gradient(90deg, #ffba00 0%, #ff6c00 100%);
+    background: -o-linear-gradient(90deg, #ffba00 0%, #ff6c00 100%);
+    background: linear-gradient(90deg, #ffba00 0%, #ff6c00 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-decoration: none;
 }
 
 .s_product_text .list li {
@@ -5543,6 +5567,9 @@ label {
     text-transform: uppercase;
     margin-right: 10px;
     border-radius: 5px;
+    color: #fff !important;
+    background-color: transparent !important;
+    border: 0;
 }
 
 .s_product_text .card_area .icon_btn {
@@ -5599,7 +5626,7 @@ label {
     width: 76px;
     border: 1px solid #eeeeee;
     border-radius: 3px;
-    padding-left: 10px;
+    padding: 4px 0
 }
 
 .product_count button {
@@ -5681,6 +5708,7 @@ label {
     color: #fff;
     border: 1px solid transparent;
 }
+
 
 .product_description_area .tab-content {
     border-left: 1px solid #eee;
@@ -7206,8 +7234,13 @@ label {
     color: #ffba00;
 }
 
+.blog_post .entry-header {
+    margin: 0;
+}
+
 .blog_post img {
     max-width: 100%;
+    margin-top: 0 !important;
 }
 
 .blog_post .white_bg_btn {
@@ -7220,8 +7253,13 @@ label {
     color: #222222;
 }
 
+.blog_post .post-thumbnail {
+    margin-bottom: 0;
+}
+
 .blog_details {
     padding-top: 20px;
+    margin: 0;
 }
 
 .blog_details h2 {
@@ -7230,6 +7268,8 @@ label {
     color: #222222;
     font-weight: 600;
     transition: all 0.3s linear;
+    padding: 0;
+    margin: 0 0 0.5rem 0;
 }
 
 .blog_details h2:hover {
@@ -7256,7 +7296,7 @@ label {
     padding: 30px;
 }
 
-.blog_right_sidebar .widget_title {
+.blog_right_sidebar .widget-title {
     font-size: 18px;
     line-height: 25px;
     background: #ffba00;
@@ -7999,6 +8039,53 @@ label {
 
 .modal-message .modal-dialog .modal-content .modal-header p {
     display: block;
+}
+
+.woocommerce div.product .product_description_area .woocommerce-tabs ul.tabs {
+    background: #e8f0f2;
+    text-align: center;
+    display: block;
+    border: none;
+    padding: 10px 0px;
+    margin: 0;
+}
+
+.woocommerce div.product .product_description_area .woocommerce-tabs ul.tabs li:after,
+.woocommerce div.product .product_description_area .woocommerce-tabs ul.tabs li:before {
+    display: none;
+}
+
+.woocommerce div.product .product_description_area .woocommerce-tabs ul.tabs li.active {
+    color: #fff;
+    border: 0;
+    padding: 0;
+    border-radius: 0;
+}
+
+.woocommerce div.product .product_description_area .woocommerce-tabs ul.tabs li.active a {
+    line-height: 38px;
+    border: 1px solid #eeeeee;
+    border-radius: 0px;
+    padding: 0px 30px;
+    color: #FFFFFF;
+    font-size: 13px;
+    font-weight: normal;
+}
+
+.woocommerce div.product .product_description_area .woocommerce-Tabs-panel--description h2 {
+    display: none;
+}
+
+.woocommerce div.product .product_description_area .woocommerce-Tabs-panel--description p {
+    max-width: 100% !important;
+    margin-top: 0;
+}
+
+.woocommerce div.product .product_description_area .panel {
+    border-left: 1px solid #eee;
+    border-right: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    padding: 30px;
 }
 
 /* End Contact Success and error Area css
