@@ -12,15 +12,17 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-    <section class="banner-area organic-breadcrumb">
+    <?php if (!is_front_page() && !is_home()) : ?>
+        <section class="banner-area organic-breadcrumb">
         <div class="container">
             <div class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end">
                 <div class="col-first">
-                    <?php the_title( '<h1>', '</h1>' );?>
+                    <?php the_title('<h1>', '</h1>'); ?>
                 </div>
             </div>
         </div>
-    </section>
+        </section>
+    <?php endif; ?>
     <div class="entry-content">
         <?php
         the_content();
