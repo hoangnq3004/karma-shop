@@ -72,89 +72,49 @@ if (!function_exists('twenty_twenty_one_entry_meta_left')) {
         }
 
         // Hide meta information on pages.
-        if (!is_single()) {
-
-            if (is_sticky()) {
-                echo '<p>' . esc_html_x('Featured post', 'Label for sticky posts', 'twentytwentyone') . '</p>';
-            }
-
-            $post_format = get_post_format();
-            if ('aside' === $post_format || 'status' === $post_format) {
-                echo '<p><a href="' . esc_url(get_permalink()) . '">' . twenty_twenty_one_continue_reading_text() . '</a></p>'; // phpcs:ignore WordPress.Security.EscapeOutput
-            }
-
-            if (has_category() || has_tag()) {
-                echo '<div class="post_tag">';
-                /* translators: Used between list items, there is a space after the comma. */
-                $categories_list = get_the_category_list(__(', ', 'twentytwentyone'));
-                if ($categories_list) {
-                    printf(
-                        $categories_list // phpcs:ignore WordPress.Security.EscapeOutput
-                    );
-                }
-
-                /* translators: Used between list items, there is a space after the comma. */
-                $tags_list = get_the_tag_list('', __(', ', 'twentytwentyone'));
-                if ($tags_list) {
-                    printf(
-                    /* translators: %s: List of tags. */
-                        '<span class="tags-links">' . esc_html__('Tagged %s', 'twentytwentyone') . '</span>',
-                        $tags_list // phpcs:ignore WordPress.Security.EscapeOutput
-                    );
-                }
-                echo '</div>';
-            }
-            echo '<ul class="blog_meta list">';
-            echo '<li><a href="#">';
-            // Posted on.
-            twenty_twenty_one_posted_on();
-            echo '<i class="lnr lnr-calendar-full"></i></a></li>';
-            echo '</ul>';
-        } else {
-
-            echo '<div class="posted-by">';
-            // Posted on.
-            twenty_twenty_one_posted_on();
-            // Posted by.
-            twenty_twenty_one_posted_by();
-            // Edit post link.
-            edit_post_link(
-                sprintf(
-                /* translators: %s: Name of current post. Only visible to screen readers. */
-                    esc_html__('Edit %s', 'twentytwentyone'),
-                    '<span class="screen-reader-text">' . get_the_title() . '</span>'
-                ),
-                '<span class="edit-link">',
-                '</span>'
-            );
-            echo '</div>';
-
-            if (has_category() || has_tag()) {
-
-                echo '<div class="post-taxonomies">';
-
-                /* translators: Used between list items, there is a space after the comma. */
-                $categories_list = get_the_category_list(__(', ', 'twentytwentyone'));
-                if ($categories_list) {
-                    printf(
-                    /* translators: %s: List of categories. */
-                        '<span class="cat-links">' . esc_html__('Categorized as %s', 'twentytwentyone') . ' </span>',
-                        $categories_list // phpcs:ignore WordPress.Security.EscapeOutput
-                    );
-                }
-
-                /* translators: Used between list items, there is a space after the comma. */
-                $tags_list = get_the_tag_list('', __(', ', 'twentytwentyone'));
-                if ($tags_list) {
-                    printf(
-                    /* translators: %s: List of tags. */
-                        '<span class="tags-links">' . esc_html__('Tagged %s', 'twentytwentyone') . '</span>',
-                        $tags_list // phpcs:ignore WordPress.Security.EscapeOutput
-                    );
-                }
-                echo '</div>';
-            }
+        if (is_sticky()) {
+            echo '<p>' . esc_html_x('Featured post', 'Label for sticky posts', 'twentytwentyone') . '</p>';
         }
+
+        $post_format = get_post_format();
+        if ('aside' === $post_format || 'status' === $post_format) {
+            echo '<p><a href="' . esc_url(get_permalink()) . '">' . twenty_twenty_one_continue_reading_text() . '</a></p>'; // phpcs:ignore WordPress.Security.EscapeOutput
+        }
+
+        if (has_category() || has_tag()) {
+            echo '<div class="post_tag">';
+            /* translators: Used between list items, there is a space after the comma. */
+            $categories_list = get_the_category_list(__(', ', 'twentytwentyone'));
+            if ($categories_list) {
+                printf(
+                    $categories_list // phpcs:ignore WordPress.Security.EscapeOutput
+                );
+            }
+
+            /* translators: Used between list items, there is a space after the comma. */
+            $tags_list = get_the_tag_list('', __(', ', 'twentytwentyone'));
+            if ($tags_list) {
+                printf(
+                /* translators: %s: List of tags. */
+                    '<span class="tags-links">' . esc_html__('Tagged %s', 'twentytwentyone') . '</span>',
+                    $tags_list // phpcs:ignore WordPress.Security.EscapeOutput
+                );
+            }
+            echo '</div>';
+        }
+        echo '<ul class="blog_meta list">';
+        echo '<li><a href="#">';
+        // Posted on.
+        twenty_twenty_one_posted_on();
+        echo '<i class="lnr lnr-calendar-full"></i></a></li>';
+        echo '</ul>';
+        echo '<ul class="social-links">
+                <li>
+                    <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-size="small">
+                        <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=' .htmlentities2(esc_url(get_permalink())) . '" class="fb-xfbml-parse-ignore">Share</a>
+                    </div>
+                </li>
+            </ul>';
     }
 }
 

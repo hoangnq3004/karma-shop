@@ -7728,6 +7728,14 @@ label {
     opacity: .5;
 }
 
+.single-post-area .single-post.row .post-thumbnail {
+    margin: 0;
+}
+
+.single-post-area .single-post.row .post-thumbnail .wp-post-image {
+    margin-top: 0;
+}
+
 @media (max-width: 991px) {
     .single-post-area .sidebar-widgets {
         padding-bottom: 0px;
