@@ -64,7 +64,7 @@ if (post_password_required()) {
                     </li>
                 </ul>
                 <?php the_excerpt(); ?>
-                    <?php woocommerce_template_single_add_to_cart(); ?>
+                <?php woocommerce_template_single_add_to_cart(); ?>
             </div>
         </div>
     </div>

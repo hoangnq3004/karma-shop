@@ -6002,14 +6002,6 @@ label {
     font-weight: 500;
 }
 
-.cart_inner .table tbody tr.bottom_button td:last-child {
-    width: 60px;
-}
-
-.cart_inner .table tbody tr.bottom_button td .cupon_text {
-    margin-left: -446px;
-}
-
 .cart_inner .table tbody tr.bottom_button td .cupon_text input {
     width: 200px;
     padding: 0px 15px;
@@ -6573,6 +6565,14 @@ label {
     margin-bottom: 80px;
 }
 
+
+.order_details .title_failed {
+    text-align: center;
+    color: #d54b00;
+    font-size: 18px;
+    margin-bottom: 80px;
+}
+
 .order_d_inner .details_item h4 {
     border-bottom: 1px solid #eee;
     padding-bottom: 12px;
@@ -6584,7 +6584,9 @@ label {
 .order_d_inner .details_item .list {
     padding-left: 18px;
 }
-
+.order_details_table .table td, .order_details_table .table th{
+    border: 0;
+}
 @media (min-width: 767px) {
     .order_d_inner .details_item .list {
         margin-bottom: 30px;
@@ -6664,6 +6666,33 @@ label {
     color: #222222;
 }
 
+.woocommerce form .form-row label, .woocommerce-page form .form-row label {
+    display: none;
+}
+
+.woocommerce form .form-row .woocommerce-input-wrapper {
+    width: 100%;
+}
+
+.woocommerce form .form-row .woocommerce-input-wrapper input,
+.woocommerce form .form-row .woocommerce-input-wrapper textarea {
+    border: 1px solid #eeeeee;
+}
+
+.woocommerce-checkout-review-order-table td,
+.woocommerce-checkout-review-order-table th {
+    border: 0;
+}
+
+.woocommerce-checkout #payment {
+    background: transparent;
+}
+.woocommerce-checkout #payment div.payment_box{
+    background-color: #fff;
+}
+.woocommerce-checkout #payment div.payment_box::before{
+    border-bottom-color: #fff;
+}
 /* End Cart Area css
 ============================================================================================ */
 /* Login form Area css
@@ -8094,6 +8123,12 @@ label {
     border-right: 1px solid #eee;
     border-bottom: 1px solid #eee;
     padding: 30px;
+}
+
+.woocommerce-cart-form table th,
+.woocommerce-cart-form table td {
+    border: 0;
+    border-top: 1px solid #dee2e6;
 }
 
 /* End Contact Success and error Area css
